@@ -94,7 +94,7 @@ class SubjectHeaderList extends TPage
         $this->pageNavigation->setAction(new TAction(array($this, 'onReload')));
         $this->pageNavigation->setWidth($this->datagrid->getWidth());
 
-        $panel = new TPanelGroup("Listagem de assuntos");
+        $panel = new TPanelGroup("Listagem de temas");
         $panel->datagrid = 'datagrid-container';
         $this->datagridPanel = $panel;
         $panel->getBody()->class .= ' table-responsive';
@@ -141,7 +141,7 @@ class SubjectHeaderList extends TPage
         $container->style = 'width: 100%';
         if(empty($param['target_container']))
         {
-            $container->add(TBreadCrumb::create(["Cadastro","Assuntos"]));
+            $container->add(TBreadCrumb::create(["Cadastro","Temas"]));
         }
 
         $container->add($panel);

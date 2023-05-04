@@ -1,30 +1,30 @@
 SET IDENTITY_INSERT category ON; 
 
-INSERT INTO category (id,cod,description,presentation_text,subject_id) VALUES (1,'salario_familia','Salário Família','',3); 
+INSERT INTO category (id,cod,description,presentation_text,subject_id,file_banner) VALUES (1,'salario_familia','Salário Família','',3,null); 
 
-INSERT INTO category (id,cod,description,presentation_text,subject_id) VALUES (2,'aposentadoria_rural','Aposentadoria Rural','',1); 
+INSERT INTO category (id,cod,description,presentation_text,subject_id,file_banner) VALUES (2,'aposentadoria_rural','Aposentadoria Rural','',1,null); 
 
-INSERT INTO category (id,cod,description,presentation_text,subject_id) VALUES (3,'aposentadoria_invalidez','Aposentadoria por Invalidez','',1); 
+INSERT INTO category (id,cod,description,presentation_text,subject_id,file_banner) VALUES (3,'aposentadoria_invalidez','Aposentadoria por Invalidez','',1,null); 
 
-INSERT INTO category (id,cod,description,presentation_text,subject_id) VALUES (4,'aposentadoria_urbana','Aposentadoria Urbana por Idade','',1); 
+INSERT INTO category (id,cod,description,presentation_text,subject_id,file_banner) VALUES (4,'aposentadoria_urbana','Aposentadoria Urbana por Idade','',1,null); 
 
-INSERT INTO category (id,cod,description,presentation_text,subject_id) VALUES (5,'aposentadoria_tempo_contribuicao','Aposentadoria por tempo de contribuição','',1); 
+INSERT INTO category (id,cod,description,presentation_text,subject_id,file_banner) VALUES (5,'aposentadoria_tempo_contribuicao','Aposentadoria por tempo de contribuição','',1,null); 
 
-INSERT INTO category (id,cod,description,presentation_text,subject_id) VALUES (6,'aposentadoria_hibrida','Aposentadoria Hibrida','',1); 
+INSERT INTO category (id,cod,description,presentation_text,subject_id,file_banner) VALUES (6,'aposentadoria_hibrida','Aposentadoria Hibrida','',1,null); 
 
-INSERT INTO category (id,cod,description,presentation_text,subject_id) VALUES (7,'aposentadoria_especial','Aposentadoria Especial','',1); 
+INSERT INTO category (id,cod,description,presentation_text,subject_id,file_banner) VALUES (7,'aposentadoria_especial','Aposentadoria Especial','',1,null); 
 
-INSERT INTO category (id,cod,description,presentation_text,subject_id) VALUES (8,'auxilio_doenca','Auxílio Doença','',3); 
+INSERT INTO category (id,cod,description,presentation_text,subject_id,file_banner) VALUES (8,'auxilio_doenca','Auxílio Doença','',3,null); 
 
-INSERT INTO category (id,cod,description,presentation_text,subject_id) VALUES (9,'auxilio_acidente','Auxílio Acidente','',3); 
+INSERT INTO category (id,cod,description,presentation_text,subject_id,file_banner) VALUES (9,'auxilio_acidente','Auxílio Acidente','',3,null); 
 
-INSERT INTO category (id,cod,description,presentation_text,subject_id) VALUES (10,'pensao_morte','Pensão por Morte','',3); 
+INSERT INTO category (id,cod,description,presentation_text,subject_id,file_banner) VALUES (10,'pensao_morte','Pensão por Morte','',3,null); 
 
-INSERT INTO category (id,cod,description,presentation_text,subject_id) VALUES (11,'salario_maternidade','Salário Maternidade','',3); 
+INSERT INTO category (id,cod,description,presentation_text,subject_id,file_banner) VALUES (11,'salario_maternidade','Salário Maternidade','',3,null); 
 
-INSERT INTO category (id,cod,description,presentation_text,subject_id) VALUES (12,'auxilio_reclusao','Auxílio Reclusão','',3); 
+INSERT INTO category (id,cod,description,presentation_text,subject_id,file_banner) VALUES (12,'auxilio_reclusao','Auxílio Reclusão','',3,null); 
 
-INSERT INTO category (id,cod,description,presentation_text,subject_id) VALUES (13,'bpc','BPC','',1); 
+INSERT INTO category (id,cod,description,presentation_text,subject_id,file_banner) VALUES (13,'bpc','BPC','',1,null); 
 
 SET IDENTITY_INSERT category OFF; 
 

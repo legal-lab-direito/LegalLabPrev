@@ -20,6 +20,7 @@ class Category extends TRecord
         parent::addAttribute('description');
         parent::addAttribute('presentation_text');
         parent::addAttribute('subject_id');
+        parent::addAttribute('file_banner');
             
     }
 
@@ -58,6 +59,15 @@ class Category extends TRecord
         $criteria = new TCriteria;
         $criteria->add(new TFilter('category_id', '=', $this->id));
         return Questions::getObjects( $criteria );
+    }
+    /**
+     * Method getFiless
+     */
+    public function getFiless()
+    {
+        $criteria = new TCriteria;
+        $criteria->add(new TFilter('category_id', '=', $this->id));
+        return Files::getObjects( $criteria );
     }
 
     public function set_questions_category_to_string($questions_category_to_string)
@@ -109,6 +119,32 @@ class Category extends TRecord
         }
     
         $values = Questions::where('category_id', '=', $this->id)->getIndexedArray('type_id','{type->description}');
+        return implode(', ', $values);
+    }
+
+    public function set_files_category_to_string($files_category_to_string)
+    {
+        if(is_array($files_category_to_string))
+        {
+            $values = Category::where('id', 'in', $files_category_to_string)->getIndexedArray('description', 'description');
+            $this->files_category_to_string = implode(', ', $values);
+        }
+        else
+        {
+            $this->files_category_to_string = $files_category_to_string;
+        }
+
+        $this->vdata['files_category_to_string'] = $this->files_category_to_string;
+    }
+
+    public function get_files_category_to_string()
+    {
+        if(!empty($this->files_category_to_string))
+        {
+            return $this->files_category_to_string;
+        }
+    
+        $values = Files::where('category_id', '=', $this->id)->getIndexedArray('category_id','{category->description}');
         return implode(', ', $values);
     }
 

@@ -1,12 +1,10 @@
-<?php
-return [
-    'host' => "", 
-    'user' => "", 
-    'pass' => "", 
-    'type' => "sqlite", 
-    'port' => "", 
-    'name' => "legallab", 
-    'fkey' => "0", 
-    'prep' => "1", 
-    'slog' => "SystemSqlLogService", 
+<?php 
+return[
+    'host' => "localhost",
+    'name' => "legallab_communication",
+    'user' => "",
+    'pass' => "",
+    'type' => "mysql",
+    'prep' => "1",
+    'slog' => "SystemSqlLogService"
 ];

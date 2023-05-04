@@ -18,8 +18,8 @@ class WelcomeView extends TPage
     {
         parent::__construct();
         
-        $html1 = new THtmlRenderer('app/resources/system_welcome_en.html');
-        $html2 = new THtmlRenderer('app/resources/system_welcome_pt.html');
+        $html1 = new THtmlRenderer('app/resources/system_welcome_pt.html');
+        $html2 = new THtmlRenderer('app/resources/system_welcome_en.html');
         $html3 = new THtmlRenderer('app/resources/system_welcome_es.html');
 
         // replace the main section variables
@@ -27,10 +27,10 @@ class WelcomeView extends TPage
         $html2->enableSection('main', array());
         $html3->enableSection('main', array());
         
-        $panel1 = new TPanelGroup('Welcome!');
+        $panel1 = new TPanelGroup('Bem-vindo!');
         $panel1->add($html1);
         
-        $panel2 = new TPanelGroup('Bem-vindo!');
+        $panel2 = new TPanelGroup('Welcome');
         $panel2->add($html2);
 		
         $panel3 = new TPanelGroup('Bienvenido!');

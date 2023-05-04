@@ -3,24 +3,20 @@
   <menuitem label="Cadastro">
     <icon>fas:newspaper fa-fw </icon>
     <menu>
-      <menuitem label="Leads">
-        <icon>far:circle fa-fw </icon>
-        <action>LeadHeaderList#method=onShow</action>
-      </menuitem>
-      <menuitem label="Categorias">
-        <icon>far:circle fa-fw </icon>
-        <action>CategoryHeaderList#method=onShow</action>
-      </menuitem>
-      <menuitem label="Assuntos">
-        <icon>far:circle fa-fw </icon>
+      <menuitem label="Temas">
+        <icon>fas:balance-scale fa-fw </icon>
         <action>SubjectHeaderList#method=onShow</action>
       </menuitem>
+      <menuitem label="Categorias">
+        <icon>fab:cuttlefish fa-fw </icon>
+        <action>CategoryHeaderList#method=onShow</action>
+      </menuitem>
       <menuitem label="Tipo de Questão">
-        <icon>far:circle fa-fw </icon>
+        <icon>far:hand-point-right fa-fw </icon>
         <action>TypeHeaderList#method=onShow</action>
       </menuitem>
       <menuitem label="Questões">
-        <icon>far:circle fa-fw </icon>
+        <icon>far:question-circle fa-fw </icon>
         <action>QuestionsHeaderList#method=onShow</action>
       </menuitem>
     </menu>

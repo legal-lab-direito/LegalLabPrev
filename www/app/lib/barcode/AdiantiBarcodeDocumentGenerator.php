@@ -33,6 +33,7 @@ class AdiantiBarcodeDocumentGenerator extends AdiantiPDFDesigner
     private $objects;          // Database Objects
     private $barcodeContent;   // Barcode content
     private $standards;        // Barcode standards
+    private $href;
     
     /**
      * Constructor method

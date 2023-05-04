@@ -30,13 +30,19 @@ class CategoryHeaderList extends TPage
 
         $this->limit = 20;
 
+        $subject_description = new TDBCombo('subject_description', 'legallab', 'Subject', 'id', '{description}','description asc'  );
         $description = new TEntry('description');
 
         $description->exitOnEnter();
 
         $description->setExitAction(new TAction([$this, 'onSearch'], ['static'=>'1', 'target_container' => $param['target_container'] ?? null]));
 
+        $subject_description->setChangeAction(new TAction([$this, 'onSearch'], ['static'=>'1', 'target_container' => $param['target_container'] ?? null]));
+
+        $subject_description->enableSearch();
         $description->setSize('100%');
+        $subject_description->setSize('100%');
+
 
         // creates a Datagrid
         $this->datagrid = new TDataGrid;
@@ -51,8 +57,10 @@ class CategoryHeaderList extends TPage
         $this->datagrid->style = 'width: 100%';
         $this->datagrid->setHeight(320);
 
+        $column_subject_description = new TDataGridColumn('subject->description', "Tema", 'left');
         $column_description = new TDataGridColumn('description', "Descrição", 'left');
 
+        $this->datagrid->addColumn($column_subject_description);
         $this->datagrid->addColumn($column_description);
 
         $action_onEdit = new TDataGridAction(array('CategoryForm', 'onEdit'));
@@ -81,9 +89,12 @@ class CategoryHeaderList extends TPage
 
         $tr->add(TElement::tag('td', ''));
         $tr->add(TElement::tag('td', ''));
+        $td_subject_description = TElement::tag('td', $subject_description);
+        $tr->add($td_subject_description);
         $td_description = TElement::tag('td', $description);
         $tr->add($td_description);
 
+        $this->datagrid_form->addField($subject_description);
         $this->datagrid_form->addField($description);
 
         $this->datagrid_form->setData( TSession::getValue(__CLASS__.'_filter_data') );
@@ -505,11 +516,11 @@ class CategoryHeaderList extends TPage
 
             if (empty($param['order']))
             {
-                $param['order'] = 'id';    
+                $param['order'] = 'subject_id';    
             }
             if (empty($param['direction']))
             {
-                $param['direction'] = 'desc';
+                $param['direction'] = 'asc';
             }
 
             $criteria->setProperties($param); // order, offset

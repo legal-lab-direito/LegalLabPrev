@@ -6,16 +6,17 @@ CREATE TABLE category(
       description varchar  (50)   NOT NULL  , 
       presentation_text text   , 
       subject_id int   NOT NULL  , 
+      file_banner varchar  (1024)   , 
  PRIMARY KEY (id),
 FOREIGN KEY(subject_id) REFERENCES subject(id)) ; 
 
-CREATE TABLE lead( 
+CREATE TABLE files( 
       id  INTEGER    NOT NULL  , 
-      name varchar  (255)   NOT NULL  , 
-      email varchar  (1024)   , 
-      date_birth date   , 
-      telephone varchar  (20)   , 
- PRIMARY KEY (id)) ; 
+      category_id int   NOT NULL  , 
+      description varchar  (50)   , 
+      file varchar  (1024)   , 
+ PRIMARY KEY (id),
+FOREIGN KEY(category_id) REFERENCES category(id)) ; 
 
 CREATE TABLE possible_answers( 
       id  INTEGER    NOT NULL  , 

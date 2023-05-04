@@ -25,7 +25,7 @@ class SubjectForm extends TPage
         // creates the form
         $this->form = new BootstrapFormBuilder(self::$formName);
         // define the form title
-        $this->form->setFormTitle("Cadastro de Assuntos");
+        $this->form->setFormTitle("Cadastro de Temas");
 
 
         $id = new TEntry('id');

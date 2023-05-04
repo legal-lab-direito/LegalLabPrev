@@ -93,8 +93,8 @@ class LoginForm extends TPage
             $row->layout = ['col-sm-12 display-flex'];
         }
         
-        $btn = $this->form->addAction('Login', new TAction(array($this, 'onLogin')), '');
-        $btn->class = 'btn btn-default';
+        $btn = $this->form->addAction('Entrar no sistema', new TAction(array($this, 'onLogin')), '');
+        $btn->class = 'btn bg-red';
         $btn->style = 'height: 40px;width: 90%;display: block;margin: auto;font-size:17px;';
         
         $wrapper = new TElement('div');

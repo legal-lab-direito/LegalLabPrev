@@ -1377,9 +1377,9 @@ background-color: #d9edf7 !important;
 }
 
 #login-wrapper .card > .panel-heading {
-    color: #333 !important;
-background-color: #f5f5f5 !important;   
-    border-top: 2px solid #f5f5f5;
+    color: #a94442 !important;
+background-color: #f2dede !important;   
+    border-top: 2px solid #f2dede;
 }
 .card.panel[widget='bootstrapformbuilder'] .panel-title, #chart-box > .panel-heading{
     font-weight: 600;
