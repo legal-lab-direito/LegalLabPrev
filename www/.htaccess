@@ -136,3 +136,20 @@ RewriteRule ^contacts/([A-Za-z0-9]*)$ rest.php?class=ContactRestService&method=h
 RewriteRule ^contacts/([A-Za-z-_0-9]*)/([A-Za-z-_0-9]*)$ rest.php?class=ContactRestService&method=$2&id=$1&%{QUERY_STRING} [NC]
 RewriteRule ^contacts$ rest.php?class=ContactRestService&method=handle&%{QUERY_STRING} [NC]
 
+
+#Rotas geradas pelo Builder
+
+RewriteRule ^categoria/([A-Za-z0-9]*)$ rest.php?class=CategoryRestService&method=handle&id=$1&%{QUERY_STRING} [NC]
+RewriteRule ^categoria/([A-Za-z-_0-9]*)/([A-Za-z-_0-9]*)$ rest.php?class=CategoryRestService&method=$2&id=$1&%{QUERY_STRING} [NC]
+RewriteRule ^categoria$ rest.php?class=CategoryRestService&method=handle&%{QUERY_STRING} [NC]
+
+
+RewriteRule ^perguntas/([A-Za-z0-9]*)$ rest.php?class=PerguntasRestService&method=handle&id=$1&%{QUERY_STRING} [NC]
+RewriteRule ^perguntas/([A-Za-z-_0-9]*)/([A-Za-z-_0-9]*)$ rest.php?class=PerguntasRestService&method=$2&id=$1&%{QUERY_STRING} [NC]
+RewriteRule ^perguntas$ rest.php?class=PerguntasRestService&method=handle&%{QUERY_STRING} [NC]
+
+
+RewriteRule ^tema/([A-Za-z0-9]*)$ rest.php?class=TemaRestService&method=handle&id=$1&%{QUERY_STRING} [NC]
+RewriteRule ^tema/([A-Za-z-_0-9]*)/([A-Za-z-_0-9]*)$ rest.php?class=TemaRestService&method=$2&id=$1&%{QUERY_STRING} [NC]
+RewriteRule ^tema$ rest.php?class=TemaRestService&method=handle&%{QUERY_STRING} [NC]
+
